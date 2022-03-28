@@ -6,42 +6,33 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "TB_BANKING_SPOT")
-public class ParkingSpotModel implements Serializable {//conversões da jvm
-    private static final long serialVersionID =1L;
+@Table(name = "TB_PARKING_SPOT")
+public class ParkingSpotModel implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
-
     @Column(nullable = false, unique = true, length = 10)
     private String parkingSpotNumber;
-
     @Column(nullable = false, unique = true, length = 7)
     private String licensePlateCar;
-
     @Column(nullable = false, length = 70)
     private String brandCar;
-
     @Column(nullable = false, length = 70)
     private String modelCar;
-
     @Column(nullable = false, length = 70)
     private String colorCar;
-
     @Column(nullable = false)
     private LocalDateTime registrationDate;
-
     @Column(nullable = false, length = 130)
     private String responsibleName;
-
     @Column(nullable = false, length = 30)
     private String apartment;
-
     @Column(nullable = false, length = 30)
     private String block;
 
-    public UUID id() {
+    public UUID getId() {
         return id;
     }
 
@@ -49,7 +40,7 @@ public class ParkingSpotModel implements Serializable {//conversões da jvm
         this.id = id;
     }
 
-    public String parkingSpotNumber() {
+    public String getParkingSpotNumber() {
         return parkingSpotNumber;
     }
 
@@ -57,7 +48,7 @@ public class ParkingSpotModel implements Serializable {//conversões da jvm
         this.parkingSpotNumber = parkingSpotNumber;
     }
 
-    public String licensePlateCar() {
+    public String getLicensePlateCar() {
         return licensePlateCar;
     }
 
@@ -65,7 +56,7 @@ public class ParkingSpotModel implements Serializable {//conversões da jvm
         this.licensePlateCar = licensePlateCar;
     }
 
-    public String brandCar() {
+    public String getBrandCar() {
         return brandCar;
     }
 
@@ -73,7 +64,7 @@ public class ParkingSpotModel implements Serializable {//conversões da jvm
         this.brandCar = brandCar;
     }
 
-    public String modelCar() {
+    public String getModelCar() {
         return modelCar;
     }
 
@@ -81,7 +72,7 @@ public class ParkingSpotModel implements Serializable {//conversões da jvm
         this.modelCar = modelCar;
     }
 
-    public String colorCar() {
+    public String getColorCar() {
         return colorCar;
     }
 
@@ -89,7 +80,7 @@ public class ParkingSpotModel implements Serializable {//conversões da jvm
         this.colorCar = colorCar;
     }
 
-    public LocalDateTime registrationDate() {
+    public LocalDateTime getRegistrationDate() {
         return registrationDate;
     }
 
@@ -97,7 +88,7 @@ public class ParkingSpotModel implements Serializable {//conversões da jvm
         this.registrationDate = registrationDate;
     }
 
-    public String responsibleName() {
+    public String getResponsibleName() {
         return responsibleName;
     }
 
@@ -105,7 +96,7 @@ public class ParkingSpotModel implements Serializable {//conversões da jvm
         this.responsibleName = responsibleName;
     }
 
-    public String apartment() {
+    public String getApartment() {
         return apartment;
     }
 
@@ -113,7 +104,7 @@ public class ParkingSpotModel implements Serializable {//conversões da jvm
         this.apartment = apartment;
     }
 
-    public String block() {
+    public String getBlock() {
         return block;
     }
 

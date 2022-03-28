@@ -1,38 +1,29 @@
-package com.api.parkingcontrol.dto;
+package com.api.parkingcontrol.dtos;
 
-import javax.persistence.Column;
-import java.time.LocalDateTime;
-import java.util.UUID;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 public class ParkingSpotDto {
-    @Column(nullable = false, unique = true, length = 10)
+
+    @NotBlank
     private String parkingSpotNumber;
-
-    @Column(nullable = false, unique = true, length = 7)
+    @NotBlank
+    @Size(max = 7)
     private String licensePlateCar;
-
-    @Column(nullable = false, length = 70)
+    @NotBlank
     private String brandCar;
-
-    @Column(nullable = false, length = 70)
+    @NotBlank
     private String modelCar;
-
-    @Column(nullable = false, length = 70)
+    @NotBlank
     private String colorCar;
-
-    @Column(nullable = false)
-    private LocalDateTime registrationDate;
-
-    @Column(nullable = false, length = 130)
+    @NotBlank
     private String responsibleName;
-
-    @Column(nullable = false, length = 30)
+    @NotBlank
     private String apartment;
-
-    @Column(nullable = false, length = 30)
+    @NotBlank
     private String block;
 
-    public String parkingSpotNumber() {
+    public String getParkingSpotNumber() {
         return parkingSpotNumber;
     }
 
@@ -40,7 +31,7 @@ public class ParkingSpotDto {
         this.parkingSpotNumber = parkingSpotNumber;
     }
 
-    public String licensePlateCar() {
+    public String getLicensePlateCar() {
         return licensePlateCar;
     }
 
@@ -48,7 +39,7 @@ public class ParkingSpotDto {
         this.licensePlateCar = licensePlateCar;
     }
 
-    public String brandCar() {
+    public String getBrandCar() {
         return brandCar;
     }
 
@@ -56,7 +47,7 @@ public class ParkingSpotDto {
         this.brandCar = brandCar;
     }
 
-    public String modelCar() {
+    public String getModelCar() {
         return modelCar;
     }
 
@@ -64,7 +55,7 @@ public class ParkingSpotDto {
         this.modelCar = modelCar;
     }
 
-    public String colorCar() {
+    public String getColorCar() {
         return colorCar;
     }
 
@@ -72,15 +63,7 @@ public class ParkingSpotDto {
         this.colorCar = colorCar;
     }
 
-    public LocalDateTime registrationDate() {
-        return registrationDate;
-    }
-
-    public void setRegistrationDate(LocalDateTime registrationDate) {
-        this.registrationDate = registrationDate;
-    }
-
-    public String responsibleName() {
+    public String getResponsibleName() {
         return responsibleName;
     }
 
@@ -88,7 +71,7 @@ public class ParkingSpotDto {
         this.responsibleName = responsibleName;
     }
 
-    public String apartment() {
+    public String getApartment() {
         return apartment;
     }
 
@@ -96,7 +79,7 @@ public class ParkingSpotDto {
         this.apartment = apartment;
     }
 
-    public String block() {
+    public String getBlock() {
         return block;
     }
 
